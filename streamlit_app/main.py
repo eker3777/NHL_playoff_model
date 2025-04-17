@@ -95,7 +95,7 @@ def main():
     
     # Run daily simulations (10,000 simulations once per day)
     try:
-        sim_results = simulation.update_daily_simulations(n_simulations=100)
+        sim_results = simulation.update_daily_simulations(n_simulations=10000)
         if sim_results:
             st.session_state.last_simulation_refresh = datetime.now()
         add_debug_info("Daily simulations checked/updated")
