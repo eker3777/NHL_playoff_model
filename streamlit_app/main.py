@@ -45,6 +45,9 @@ if 'daily_simulations' not in st.session_state:
 if 'debug_info' not in st.session_state:
     st.session_state.debug_info = []
 
+if 'num_simulations_run' not in st.session_state:
+    st.session_state.num_simulations_run = 0  # Initialize to 0 if not set
+
 def add_debug_info(message):
     """Add debugging information to session state"""
     timestamp = datetime.now().strftime("%H:%M:%S")
@@ -77,12 +80,14 @@ def main():
         st.session_state.last_simulation_refresh = datetime.now()
         add_debug_info("Initialized simulation refresh timestamp")
     
-    # Display last update times instead of buttons for force refresh
-    col1, col2 = st.columns(2)
+    # Display last update times and number of simulations run
+    col1, col2, col3 = st.columns(3)
     with col1:
         st.info(f"Last data refresh: {convert_to_eastern(st.session_state.last_data_refresh)}")
     with col2:
         st.info(f"Last simulation run: {convert_to_eastern(st.session_state.last_simulation_refresh)}")
+    with col3:
+        st.info(f"Simulations run: {st.session_state.num_simulations_run}")
     
     # Update daily data in the early morning once per day
     try:
@@ -95,10 +100,12 @@ def main():
     
     # Run daily simulations (10,000 simulations once per day)
     try:
-        sim_results = simulation.update_daily_simulations(n_simulations=10000)
+        n_simulations = 10000
+        sim_results = simulation.update_daily_simulations(n_simulations=n_simulations)
         if sim_results:
             st.session_state.last_simulation_refresh = datetime.now()
-        add_debug_info("Daily simulations checked/updated")
+            st.session_state.num_simulations_run = n_simulations  # Update the number of simulations run
+            add_debug_info(f"Ran {n_simulations} simulations successfully")
     except Exception as e:
         add_debug_info(f"Error in daily simulation update: {str(e)}")
     
@@ -120,7 +127,7 @@ def main():
     """
     st.markdown(hide_streamlit_style, unsafe_allow_html=True)
     
-    # Sidebar for navigation - Remove duplicate title/header items
+    # Sidebar for navigation and simulation count
     with st.sidebar:
         # Only use Radio control for navigation, no extra buttons or titles
         st.markdown("## Navigation")
@@ -141,6 +148,10 @@ def main():
         else:
             st.error("No models loaded")
             add_debug_info("No models available in model_data")
+        
+        # Display number of simulations run in sidebar
+        st.markdown("## Simulation Stats")
+        st.info(f"Simulations run: {st.session_state.num_simulations_run}")
         
         # Debug expander
         with st.expander("Debug Information"):
