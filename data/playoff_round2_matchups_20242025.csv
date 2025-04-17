@@ -1,17 +1,17 @@
 conference,division,matchup,count,probability,top_seed_win_pct
-Eastern,M,Washington Capitals vs Carolina Hurricanes,3900,39.0,52.69230769230769
-Western,C,Winnipeg Jets vs Dallas Stars,3899,38.99,55.14234419081816
-Western,P,Vegas Golden Knights vs Los Angeles Kings,3882,38.82,43.585780525502315
-Eastern,A,Toronto Maple Leafs vs Tampa Bay Lightning,3362,33.62,44.55681142177275
-Western,P,Vegas Golden Knights vs Edmonton Oilers,3047,30.470000000000002,57.03971119133574
-Western,C,Winnipeg Jets vs Colorado Avalanche,2746,27.46,51.78441369264385
-Eastern,M,Washington Capitals vs New Jersey Devils,2715,27.150000000000002,58.011049723756905
-Eastern,A,Tampa Bay Lightning vs Ottawa Senators,2433,24.33,64.89930127414715
-Eastern,A,Toronto Maple Leafs vs Florida Panthers,2404,24.04,40.05823627287853
-Eastern,M,Carolina Hurricanes vs Montréal Canadiens,1998,19.98,65.61561561561562
-Western,C,Dallas Stars vs St. Louis Blues,1981,19.81,57.69813225643614
-Eastern,A,Florida Panthers vs Ottawa Senators,1801,18.01,54.80288728484175
-Western,P,Los Angeles Kings vs Minnesota Wild,1750,17.5,66.68571428571428
-Eastern,M,New Jersey Devils vs Montréal Canadiens,1387,13.87,63.013698630136986
-Western,C,Colorado Avalanche vs St. Louis Blues,1374,13.74,64.3377001455604
-Western,P,Edmonton Oilers vs Minnesota Wild,1321,13.209999999999999,59.95457986373959
+Eastern,M,Washington Capitals vs Carolina Hurricanes,399,39.900000000000006,53.63408521303258
+Western,P,Vegas Golden Knights vs Los Angeles Kings,382,38.2,39.26701570680628
+Western,C,Winnipeg Jets vs Dallas Stars,375,37.5,60.0
+Eastern,A,Toronto Maple Leafs vs Tampa Bay Lightning,321,32.1,42.99065420560748
+Western,P,Vegas Golden Knights vs Edmonton Oilers,312,31.2,57.692307692307686
+Western,C,Winnipeg Jets vs Colorado Avalanche,286,28.599999999999998,51.048951048951054
+Eastern,M,Washington Capitals vs New Jersey Devils,268,26.8,52.98507462686567
+Eastern,A,Tampa Bay Lightning vs Ottawa Senators,260,26.0,67.6923076923077
+Eastern,A,Toronto Maple Leafs vs Florida Panthers,239,23.9,45.18828451882845
+Western,C,Dallas Stars vs St. Louis Blues,210,21.0,57.61904761904761
+Eastern,M,Carolina Hurricanes vs Montréal Canadiens,204,20.4,60.78431372549019
+Eastern,A,Florida Panthers vs Ottawa Senators,180,18.0,50.0
+Western,P,Los Angeles Kings vs Minnesota Wild,163,16.3,63.80368098159509
+Western,P,Edmonton Oilers vs Minnesota Wild,143,14.299999999999999,57.34265734265735
+Eastern,M,New Jersey Devils vs Montréal Canadiens,129,12.9,58.91472868217055
+Western,C,Colorado Avalanche vs St. Louis Blues,129,12.9,63.565891472868216
