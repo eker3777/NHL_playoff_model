@@ -48,6 +48,9 @@ if 'debug_info' not in st.session_state:
 if 'num_simulations_run' not in st.session_state:
     st.session_state.num_simulations_run = 0  # Initialize to 0 if not set
 
+# Add a secret key or developer mode check
+IS_DEVELOPER = st.secrets.get("developer_mode", False)  # Set this in Streamlit secrets or environment
+
 def add_debug_info(message):
     """Add debugging information to session state"""
     timestamp = datetime.now().strftime("%H:%M:%S")
@@ -65,6 +68,20 @@ def convert_to_eastern(dt):
         dt = dt.replace(tzinfo=pytz.UTC)
     eastern_time = dt.astimezone(eastern)
     return eastern_time.strftime("%Y-%m-%d %H:%M:%S %Z")
+
+def refresh_simulations():
+    """Manually refresh the number of simulations."""
+    try:
+        n_simulations = 10000
+        sim_results = simulation.update_daily_simulations(n_simulations=n_simulations)
+        if sim_results:
+            st.session_state.last_simulation_refresh = datetime.now()
+            st.session_state.num_simulations_run = n_simulations  # Update the number of simulations run
+            st.success(f"Manually refreshed {n_simulations} simulations!")
+            add_debug_info(f"Manually ran {n_simulations} simulations successfully")
+    except Exception as e:
+        st.error(f"Error during manual simulation refresh: {e}")
+        add_debug_info(f"Error during manual simulation refresh: {e}")
 
 def main():
     # App title and description
@@ -149,9 +166,10 @@ def main():
             st.error("No models loaded")
             add_debug_info("No models available in model_data")
         
-        # Display number of simulations run in sidebar
-        st.markdown("## Simulation Stats")
-        st.info(f"Simulations run: {st.session_state.num_simulations_run}")
+        # Developer-only manual refresh button (hidden on Full Simulation Results page)
+        if IS_DEVELOPER and page != "Full Simulation Results":
+            if st.button("Refresh Simulations (Admin Only)"):
+                refresh_simulations()
         
         # Debug expander
         with st.expander("Debug Information"):
