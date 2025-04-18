@@ -64,7 +64,51 @@ def check_if_behind_remote():
     commits_behind = int(behind_check.strip())
     return commits_behind > 0, current_branch
 
-def push_updates(commit_message=None, auto_pull=True, force_push=False):
+def check_incoming_changes():
+    """Check which files have incoming changes from remote."""
+    # Get current branch
+    branch_output, branch_success = run_command("git branch --show-current", verbose=False)
+    if not branch_success:
+        return None
+    
+    current_branch = branch_output.strip()
+    
+    # Fetch latest changes
+    _, fetch_success = run_command("git fetch origin", verbose=False)
+    if not fetch_success:
+        return None
+    
+    # Get list of files with incoming changes
+    diff_output, diff_success = run_command(
+        f"git diff --name-only HEAD..origin/{current_branch}", verbose=False
+    )
+    if not diff_success:
+        return None
+    
+    return [file for file in diff_output.splitlines() if file.strip()]
+
+def selective_pull(files_to_pull):
+    """Pull changes only for specified files."""
+    branch_output, branch_success = run_command("git branch --show-current", verbose=False)
+    if not branch_success:
+        print("Failed to determine current branch.")
+        return False
+    
+    current_branch = branch_output.strip()
+    
+    success = True
+    for file_path in files_to_pull:
+        print(f"Pulling changes for {file_path}...")
+        _, checkout_success = run_command(f"git checkout origin/{current_branch} -- {file_path}")
+        if not checkout_success:
+            print(f"  Failed to update {file_path}")
+            success = False
+        else:
+            print(f"  ✅ Updated {file_path}")
+    
+    return success
+
+def push_updates(commit_message=None, auto_pull=True, force_push=False, selective_files=None):
     """Push updates to the git repository."""
     print("Checking Git status...")
     modified_files = git_status()
@@ -107,22 +151,59 @@ def push_updates(commit_message=None, auto_pull=True, force_push=False):
     
     # Check if we're behind the remote and need to pull first
     is_behind, current_branch = check_if_behind_remote()
-    if is_behind and auto_pull and not force_push:
+    if is_behind and not force_push:
         print("\n⚠️ Your local branch is behind the remote branch.")
-        print("Attempting to pull changes before pushing...")
         
-        # Pull changes
-        pull_output, pull_success = run_command(f"git pull origin {current_branch}")
+        # Check which files have incoming changes
+        incoming_files = check_incoming_changes()
+        print("\nFiles with incoming changes from remote:")
+        if incoming_files:
+            for file in incoming_files:
+                print(f"  - {file}")
+            
+            # Specific handling for main.py and requirements.txt
+            critical_files = [f for f in incoming_files if f.endswith("main.py") or f == "requirements.txt"]
+            if critical_files and not auto_pull:
+                print("\nNotice: Critical files have incoming changes:")
+                for file in critical_files:
+                    print(f"  - {file}")
+                
+                try:
+                    choice = input("\nDo you want to: [1] Update these files, [2] Force push, [3] Cancel? ")
+                    if choice == "1":
+                        # Pull only these critical files
+                        if selective_pull(critical_files):
+                            print("\n✅ Successfully updated critical files.")
+                            # Re-stage the changes as we've updated files
+                            _, _ = run_command("git add .")
+                    elif choice == "2":
+                        force_push = True
+                        print("\n⚠️ Proceeding with force push.")
+                    else:
+                        print("\nOperation cancelled.")
+                        return False
+                except KeyboardInterrupt:
+                    print("\nOperation cancelled.")
+                    return False
+        else:
+            print("  None found (this is unusual, might be a structural change)")
         
-        if not pull_success:
-            print("\n❌ Pull failed due to conflicts.")
-            print("You have two options:")
-            print("  1. Resolve conflicts manually, then run git push")
-            print("  2. Re-run this script with --force-push to force push your changes")
-            print("     (Warning: This will overwrite remote changes)")
-            return False
-        
-        print("✅ Successfully pulled remote changes.")
+        if auto_pull and not force_push:
+            print("\nAttempting to pull changes before pushing...")
+            
+            # Pull changes
+            pull_output, pull_success = run_command(f"git pull origin {current_branch}")
+            
+            if not pull_success:
+                print("\n❌ Pull failed due to conflicts.")
+                print("Options:")
+                print("  1. Run: python git_pull.py --files requirements.txt streamlit_app/main.py")
+                print("     Then: python git_push.py")
+                print("  2. Resolve conflicts manually with: git pull")
+                print("  3. Force push with: python git_push.py --force-push (overwrites remote changes)")
+                return False
+            
+            print("✅ Successfully pulled remote changes.")
     
     # Push changes
     print("\nPushing to remote repository...")
@@ -147,6 +228,7 @@ if __name__ == "__main__":
     commit_message = None
     auto_pull = True
     force_push = False
+    selective_files = None
     
     # Process flags
     i = 1
@@ -155,6 +237,10 @@ if __name__ == "__main__":
             auto_pull = False
         elif sys.argv[i] == "--force-push":
             force_push = True
+        elif sys.argv[i] == "--files" and i + 1 < len(sys.argv):
+            selective_files = sys.argv[i+1:] 
+            # Stop processing args as these are all filenames
+            break
         else:
             # If not a recognized flag, assume it's part of the commit message
             if commit_message is None:
@@ -163,4 +249,4 @@ if __name__ == "__main__":
                 commit_message += " " + sys.argv[i]
         i += 1
     
-    push_updates(commit_message, auto_pull, force_push)
+    push_updates(commit_message, auto_pull, force_push, selective_files)
