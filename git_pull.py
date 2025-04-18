@@ -124,19 +124,241 @@ def pull_updates(force=False, hard_reset=False):
     print("\n✅ Successfully pulled changes from the remote repository!")
     return True
 
+def sync_changes():
+    """Sync changes between local and remote repositories.
+    
+    This handles the scenario where:
+    1. Changes were made online (on GitHub)
+    2. Changes were also made locally
+    3. You want to merge both sets of changes and update the online repository
+    """
+    print("Starting synchronization between local and remote repositories...")
+    
+    # Check current branch
+    branch_output, branch_success = run_command("git branch --show-current", verbose=False)
+    if not branch_success:
+        print("Failed to determine current branch.")
+        return False
+    
+    current_branch = branch_output.strip()
+    print(f"Current branch: {current_branch}")
+    
+    # Check if there are local changes that need to be committed
+    has_changes = check_for_changes()
+    if has_changes:
+        print("\n📝 You have uncommitted local changes.")
+        try:
+            should_commit = input("Would you like to commit these changes first? (y/n): ")
+            if should_commit.lower() == 'y':
+                commit_msg = input("Enter commit message (or press Enter for default message): ")
+                if not commit_msg:
+                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    commit_msg = f"Local changes before sync - {timestamp}"
+                
+                # Stage and commit changes
+                print("\nStaging local changes...")
+                _, stage_success = run_command("git add .")
+                if not stage_success:
+                    print("Failed to stage changes.")
+                    return False
+                
+                print(f"\nCommitting with message: '{commit_msg}'")
+                _, commit_success = run_command(f'git commit -m "{commit_msg}"')
+                if not commit_success:
+                    print("Failed to commit changes.")
+                    return False
+                
+                print("✅ Local changes committed successfully.")
+            else:
+                print("\n⚠️ Continuing without committing local changes.")
+                print("This may make merging more complex.")
+        except KeyboardInterrupt:
+            print("\nSync operation cancelled.")
+            return False
+    
+    # Fetch remote changes
+    print("\nFetching changes from remote repository...")
+    _, fetch_success = run_command("git fetch origin")
+    if not fetch_success:
+        print("Failed to fetch from remote repository.")
+        return False
+    
+    # Check if we need to pull
+    behind_check, _ = run_command(f"git rev-list --count HEAD..origin/{current_branch}", verbose=False)
+    commits_behind = int(behind_check.strip()) if behind_check.strip().isdigit() else 0
+    
+    if commits_behind > 0:
+        print(f"\nYour local repository is {commits_behind} commit(s) behind the remote.")
+        print("Pulling remote changes...")
+        
+        # Pull changes
+        _, pull_success = run_command(f"git pull origin {current_branch}")
+        if not pull_success:
+            print("\n⚠️ Pull failed. You may need to resolve conflicts manually.")
+            print("After resolving conflicts, run:")
+            print("  git add .")
+            print("  git commit -m \"Resolve merge conflicts\"")
+            print("  git push origin " + current_branch)
+            return False
+        
+        print("✅ Successfully pulled remote changes.")
+    else:
+        print("\nNo new changes to pull from remote repository.")
+    
+    # Check if we need to push
+    ahead_check, _ = run_command(f"git rev-list --count origin/{current_branch}..HEAD", verbose=False)
+    commits_ahead = int(ahead_check.strip()) if ahead_check.strip().isdigit() else 0
+    
+    if commits_ahead > 0:
+        print(f"\nYour local repository is {commits_ahead} commit(s) ahead of the remote.")
+        print("Pushing local changes to remote...")
+        
+        # Push changes
+        _, push_success = run_command(f"git push origin {current_branch}")
+        if not push_success:
+            print("Failed to push changes to remote repository.")
+            return False
+        
+        print("✅ Successfully pushed local changes to remote repository.")
+    else:
+        print("\nNo local commits to push to remote repository.")
+    
+    print("\n🔄 Synchronization complete! Local and remote repositories are now in sync.")
+    return True
+
+def pull_specific_files(file_paths):
+    """Pull only specific files from the remote repository.
+    
+    Args:
+        file_paths: List of file paths to pull
+    """
+    if not file_paths:
+        print("No files specified to pull.")
+        return False
+    
+    # Check current branch
+    branch_output, branch_success = run_command("git branch --show-current", verbose=False)
+    if not branch_success:
+        print("Failed to determine current branch.")
+        return False
+    
+    current_branch = branch_output.strip()
+    print(f"Current branch: {current_branch}")
+    
+    # Fetch latest from remote
+    print("\nFetching latest changes from remote repository...")
+    _, fetch_success = run_command("git fetch origin")
+    if not fetch_success:
+        print("Failed to fetch from remote repository.")
+        return False
+    
+    # Check if any of the specified files have changes
+    modified_files = []
+    print("\nChecking for changes in specified files:")
+    for file_path in file_paths:
+        # Normalize file path
+        file_path = file_path.strip()
+        print(f"  - {file_path}")
+        
+        # Check if file exists in remote
+        file_check, _ = run_command(f"git ls-tree -r --name-only origin/{current_branch} | grep -q '^{file_path}$' && echo 'exists' || echo 'not found'", verbose=False)
+        if "not found" in file_check:
+            print(f"    ⚠️ File not found in remote repository: {file_path}")
+            continue
+        
+        # Check if file has changes
+        diff_check, _ = run_command(f"git diff --name-only HEAD origin/{current_branch} -- {file_path}", verbose=False)
+        if diff_check.strip():
+            modified_files.append(file_path)
+            print(f"    ✓ Has changes in remote")
+        else:
+            print(f"    - No changes detected")
+    
+    if not modified_files:
+        print("\n✅ No changes found in the specified files. Everything is up-to-date.")
+        return True
+    
+    # Pull specific files
+    print(f"\nPulling {len(modified_files)} modified files from remote repository...")
+    
+    success = True
+    for file_path in modified_files:
+        print(f"\nUpdating {file_path}...")
+        
+        # Check if local file has changes
+        local_changes, _ = run_command(f"git diff --name-only -- {file_path}", verbose=False)
+        if local_changes.strip():
+            print(f"  ⚠️ File has local modifications: {file_path}")
+            try:
+                choice = input("  What would you like to do? [s]kip, [o]verwrite local changes, [m]erge: ")
+                if choice.lower() == 's':
+                    print(f"  Skipping {file_path}")
+                    continue
+                elif choice.lower() == 'o':
+                    _, reset_success = run_command(f"git checkout HEAD -- {file_path}")
+                    if not reset_success:
+                        print(f"  Failed to reset {file_path}")
+                        success = False
+                        continue
+                elif choice.lower() != 'm':
+                    print(f"  Invalid choice, skipping {file_path}")
+                    continue
+            except KeyboardInterrupt:
+                print("\nPull operation cancelled.")
+                return False
+        
+        # Checkout the file from remote
+        _, checkout_success = run_command(f"git checkout origin/{current_branch} -- {file_path}")
+        if not checkout_success:
+            print(f"  Failed to checkout {file_path} from remote.")
+            success = False
+            continue
+        
+        print(f"  ✅ Updated {file_path} successfully.")
+    
+    if success:
+        print("\n✅ Successfully pulled specified files from the remote repository!")
+    else:
+        print("\n⚠️ Completed with some errors. Some files may not have been updated.")
+    
+    return success
+
 if __name__ == "__main__":
     # Parse arguments
     force = False
     hard_reset = False
+    sync = False
+    specific_files = []
     
-    if "--force" in sys.argv or "-f" in sys.argv:
-        force = True
-        # Remove the flag from argv
-        sys.argv = [arg for arg in sys.argv if arg != "--force" and arg != "-f"]
+    # Process flags first
+    i = 1
+    while i < len(sys.argv):
+        if sys.argv[i] in ["--force", "-f"]:
+            force = True
+        elif sys.argv[i] in ["--hard-reset", "-hr"]:
+            hard_reset = True
+        elif sys.argv[i] in ["--sync", "-s"]:
+            sync = True
+        elif sys.argv[i] in ["--files", "-files", "--file", "-file"]:
+            # Next arguments should be file paths until we hit another flag
+            i += 1
+            while i < len(sys.argv) and not sys.argv[i].startswith("-"):
+                specific_files.append(sys.argv[i])
+                i += 1
+            i -= 1  # Compensate for the i++ at the end of the loop
+        else:
+            # If not a recognized flag, assume it's a file path
+            if not sys.argv[i].startswith("-"):
+                specific_files.append(sys.argv[i])
+        i += 1
     
-    if "--hard-reset" in sys.argv or "-hr" in sys.argv:
-        hard_reset = True
-        # Remove the flag from argv
-        sys.argv = [arg for arg in sys.argv if arg != "--hard-reset" and arg != "-hr"]
-    
-    pull_updates(force=force, hard_reset=hard_reset)
+    # Choose the appropriate operation
+    if specific_files:
+        # Pull specific files
+        pull_specific_files(specific_files)
+    elif sync:
+        # Sync local and remote changes
+        sync_changes()
+    else:
+        # Regular pull operation
+        pull_updates(force=force, hard_reset=hard_reset)
