@@ -1,0 +1,251 @@
+2025-04-19T12:23:16.657749-04:00: Page error (Debug): cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 227, in main
+    from streamlit_app.pages.debug import show_debug
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 23, in <module>
+    from streamlit_app.utils.cache_manager import get_eastern_time, make_datetime_timezone_aware
+ImportError: cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+
+2025-04-19T12:28:07.197022-04:00: Page error (First Round): cannot import name 'show_first_round' from 'streamlit_app.pages.first_round' (/workspaces/NHL_playoff_model/streamlit_app/pages/first_round.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 207, in main
+    from streamlit_app.pages.first_round import show_first_round
+ImportError: cannot import name 'show_first_round' from 'streamlit_app.pages.first_round' (/workspaces/NHL_playoff_model/streamlit_app/pages/first_round.py)
+
+2025-04-19T12:29:44.978725-04:00: Page error (Debug): cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 227, in main
+    from streamlit_app.pages.debug import show_debug
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 23, in <module>
+    from streamlit_app.utils.cache_manager import get_eastern_time, make_datetime_timezone_aware
+ImportError: cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+
+2025-04-19T12:32:33.752776-04:00: Page error (Debug): cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 227, in main
+    from streamlit_app.pages.debug import show_debug
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 23, in <module>
+    from streamlit_app.utils.cache_manager import get_eastern_time, make_datetime_timezone_aware
+ImportError: cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+
+2025-04-19T12:36:31.677858-04:00: Page error (Debug): cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 227, in main
+    from streamlit_app.pages.debug import show_debug
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 23, in <module>
+    from streamlit_app.utils.cache_manager import get_eastern_time, make_datetime_timezone_aware
+ImportError: cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+
+2025-04-19T16:38:06.830937-04:00: Page error (Debug): cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 227, in main
+    from streamlit_app.pages.debug import show_debug
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 23, in <module>
+    from streamlit_app.utils.cache_manager import get_eastern_time, make_datetime_timezone_aware
+ImportError: cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+
+2025-04-19T12:39:11.009631-04:00: Page error (Debug): cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 227, in main
+    from streamlit_app.pages.debug import show_debug
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 23, in <module>
+    from streamlit_app.utils.cache_manager import get_eastern_time, make_datetime_timezone_aware
+ImportError: cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+
+2025-04-19T12:43:24.327508-04:00: Page error (Debug): cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 239, in main
+    from streamlit_app.pages.debug import show_debug
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 23, in <module>
+    from streamlit_app.utils.cache_manager import get_eastern_time, make_datetime_timezone_aware
+ImportError: cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+
+2025-04-19T12:46:16.390847-04:00: Page error (Debug): cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 239, in main
+    from streamlit_app.pages.debug import show_debug
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 23, in <module>
+    from streamlit_app.utils.cache_manager import get_eastern_time, make_datetime_timezone_aware
+ImportError: cannot import name 'make_datetime_timezone_aware' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+
+2025-04-19T12:48:34.727276-04:00: Page error (Debug): cannot import name 'show_debug' from 'streamlit_app.pages.debug' (/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 244, in main
+    from streamlit_app.pages.debug import show_debug
+ImportError: cannot import name 'show_debug' from 'streamlit_app.pages.debug' (/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py)
+
+2025-04-19T12:53:14.427458-04:00: Page error (Debug): 'NoneType' object has no attribute 'strftime'
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 245, in main
+    show_debug()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 601, in show_debug
+    app()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 597, in app
+    display_debug_page(team_data=team_data, model_data=models)
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 59, in display_debug_page
+    st.write(f"Last simulation refresh: {sim_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+                                         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strftime'
+
+2025-04-19T12:54:16.865488-04:00: Page error (Debug): 'NoneType' object has no attribute 'strftime'
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 245, in main
+    show_debug()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 601, in show_debug
+    app()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 597, in app
+    display_debug_page(team_data=team_data, model_data=models)
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 59, in display_debug_page
+    st.write(f"Last simulation refresh: {sim_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+                                         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strftime'
+
+2025-04-19T12:55:01.944570-04:00: Page error (Debug): can't subtract offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 245, in main
+    show_debug()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 607, in show_debug
+    app()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 603, in app
+    display_debug_page(team_data=team_data, model_data=models)
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 85, in display_debug_page
+    time_since_refresh = datetime.utcnow() - refresh_time
+                         ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+TypeError: can't subtract offset-naive and offset-aware datetimes
+
+2025-04-19T13:38:23.685055-04:00: Page error (Debug): cannot import name 'get_eastern_time' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 244, in main
+    from streamlit_app.pages.debug import show_debug
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 22, in <module>
+    from streamlit_app.utils.debug_utils import *
+  File "/workspaces/NHL_playoff_model/streamlit_app/utils/debug_utils.py", line 32, in <module>
+    from streamlit_app.utils.cache_manager import get_eastern_time
+ImportError: cannot import name 'get_eastern_time' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+
+2025-04-19T13:41:55.119789-04:00: Page error (Debug): cannot import name 'get_eastern_time' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 244, in main
+    from streamlit_app.pages.debug import show_debug
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 22, in <module>
+    from streamlit_app.utils.debug_utils import *
+  File "/workspaces/NHL_playoff_model/streamlit_app/utils/debug_utils.py", line 32, in <module>
+    from streamlit_app.utils.cache_manager import get_eastern_time
+ImportError: cannot import name 'get_eastern_time' from 'streamlit_app.utils.cache_manager' (/workspaces/NHL_playoff_model/streamlit_app/utils/cache_manager.py)
+
+2025-04-19T13:50:28.886961-04:00: Page error (Debug): module 'matplotlib.pyplot' has no attribute '__version__'
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 245, in main
+    show_debug()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 865, in show_debug
+    app()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 861, in app
+    display_debug_page(team_data=team_data, model_data=models)
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 833, in display_debug_page
+    'Matplotlib': plt.__version__,
+                  ^^^^^^^^^^^^^^^
+AttributeError: module 'matplotlib.pyplot' has no attribute '__version__'
+
+2025-04-19T13:50:47.525855-04:00: Page error (Debug): module 'matplotlib.pyplot' has no attribute '__version__'
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 245, in main
+    show_debug()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 865, in show_debug
+    app()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 861, in app
+    display_debug_page(team_data=team_data, model_data=models)
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 833, in display_debug_page
+    'Matplotlib': plt.__version__,
+                  ^^^^^^^^^^^^^^^
+AttributeError: module 'matplotlib.pyplot' has no attribute '__version__'
+
+2025-04-19T13:50:48.517110-04:00: Page error (Debug): module 'matplotlib.pyplot' has no attribute '__version__'
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 245, in main
+    show_debug()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 865, in show_debug
+    app()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 861, in app
+    display_debug_page(team_data=team_data, model_data=models)
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 833, in display_debug_page
+    'Matplotlib': plt.__version__,
+                  ^^^^^^^^^^^^^^^
+AttributeError: module 'matplotlib.pyplot' has no attribute '__version__'
+
+2025-04-19T13:50:49.493128-04:00: Page error (Debug): module 'matplotlib.pyplot' has no attribute '__version__'
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 245, in main
+    show_debug()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 865, in show_debug
+    app()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 861, in app
+    display_debug_page(team_data=team_data, model_data=models)
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 833, in display_debug_page
+    'Matplotlib': plt.__version__,
+                  ^^^^^^^^^^^^^^^
+AttributeError: module 'matplotlib.pyplot' has no attribute '__version__'
+
+2025-04-19T13:50:52.167487-04:00: Page error (Debug): module 'matplotlib.pyplot' has no attribute '__version__'
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 245, in main
+    show_debug()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 865, in show_debug
+    app()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 861, in app
+    display_debug_page(team_data=team_data, model_data=models)
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 833, in display_debug_page
+    'Matplotlib': plt.__version__,
+                  ^^^^^^^^^^^^^^^
+AttributeError: module 'matplotlib.pyplot' has no attribute '__version__'
+
+2025-04-19T13:52:18.154686-04:00: Page error (Debug): module 'matplotlib.pyplot' has no attribute '__version__'
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 245, in main
+    show_debug()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 872, in show_debug
+    app()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 868, in app
+    display_debug_page(team_data=team_data, model_data=models)
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 840, in display_debug_page
+    'Matplotlib': plt.__version__,
+                  ^^^^^^^^^^^^^^^
+AttributeError: module 'matplotlib.pyplot' has no attribute '__version__'
+
+2025-04-19T13:52:29.071217-04:00: Data refresh error: update_daily_data() got multiple values for argument 'force'
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 155, in display_sidebar
+    update_daily_data(DATA_DIR, current_season, season_str, force=True)
+TypeError: update_daily_data() got multiple values for argument 'force'
+
+2025-04-19T13:52:50.319354-04:00: Page error (Debug): module 'matplotlib.pyplot' has no attribute '__version__'
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 245, in main
+    show_debug()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 872, in show_debug
+    app()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 868, in app
+    display_debug_page(team_data=team_data, model_data=models)
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 840, in display_debug_page
+    'Matplotlib': plt.__version__,
+                  ^^^^^^^^^^^^^^^
+AttributeError: module 'matplotlib.pyplot' has no attribute '__version__'
+
+2025-04-19T13:58:59.446731-04:00: Page error (Debug): cannot access local variable 'MODEL_DIR' where it is not associated with a value
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 264, in main
+    show_debug()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 914, in show_debug
+    app()
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 910, in app
+    display_debug_page(team_data=team_data, model_data=models)
+  File "/workspaces/NHL_playoff_model/streamlit_app/pages/debug.py", line 758, in display_debug_page
+    models = load_models(MODEL_DIR)
+                         ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'MODEL_DIR' where it is not associated with a value
+
+2025-04-19T14:14:05.354261-04:00: Data refresh error: update_daily_data() got multiple values for argument 'force'
+Traceback (most recent call last):
+  File "/workspaces/NHL_playoff_model/app.py", line 155, in display_sidebar
+    update_daily_data(DATA_DIR, current_season, season_str, force=True)
+TypeError: update_daily_data() got multiple values for argument 'force'
+

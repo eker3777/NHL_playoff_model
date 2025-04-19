@@ -1,0 +1,336 @@
+{
+  "app.py": {
+    "defined_constants": {},
+    "imported_constants": [
+      "APP_TITLE",
+      "APP_VERSION",
+      "GITHUB_URL",
+      "THEME_COLOR",
+      "REFRESH_TIMEZONE",
+      "DATA_FOLDER",
+      "MODEL_FOLDER",
+      "ENABLE_DEBUG_UI"
+    ],
+    "hardcoded_values": []
+  },
+  "tests/test_validation.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "tests/__init__.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/__init__.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/config.py": {
+    "defined_constants": {
+      "APP_TITLE": "NHL Playoff Predictor",
+      "APP_VERSION": "2.0.0",
+      "AUTHOR": "Your Name",
+      "GITHUB_URL": "https://github.com/yourusername/NHL_playoff_model",
+      "REFRESH_TIMEZONE": null,
+      "REFRESH_TIME": null,
+      "DATA_EXPIRY_HOURS": 24,
+      "HOME_ICE_ADVANTAGE": 0.039,
+      "SERIES_LENGTH_DIST": [
+        0.14,
+        0.243,
+        0.336,
+        0.281
+      ],
+      "DEFAULT_WIN_PROBABILITY": 0.5,
+      "NHL_API_BASE_URL": "https://statsapi.web.nhl.com/api/v1",
+      "NHL_API_TIMEOUT": 30,
+      "RANDOM_SEED": 42,
+      "DEFAULT_N_SIMULATIONS": 1000,
+      "MIN_REQUIRED_SIMULATIONS": 100,
+      "MAX_SIMULATIONS": 10000,
+      "TEAM_STATS_ESSENTIAL": [
+        "points",
+        "wins",
+        "losses",
+        "otLosses",
+        "goalFor",
+        "goalAgainst",
+        "goalDifferential",
+        "homeWins",
+        "roadWins"
+      ],
+      "TEAM_STATS_IMPORTANT": [
+        "points",
+        "regulationWins",
+        "goalDifferential",
+        "goalFor",
+        "goalAgainst",
+        "homeWins",
+        "roadWins",
+        "homeGoalDifferential",
+        "roadGoalDifferential",
+        "l10Points",
+        "l10GoalDifferential"
+      ],
+      "CRITICAL_FEATURES": [
+        "PP%_rel",
+        "PK%_rel",
+        "FO%",
+        "playoff_performance_score",
+        "xGoalsPercentage",
+        "homeRegulationWin%",
+        "roadRegulationWin%",
+        "possAdjHitsPctg",
+        "possAdjTakeawaysPctg",
+        "possTypeAdjGiveawaysPctg",
+        "reboundxGoalsPctg",
+        "goalDiff/G",
+        "adjGoalsSavedAboveX/60",
+        "adjGoalsScoredAboveX/60"
+      ],
+      "MODEL_FEATURES": null,
+      "PERCENTAGE_COLUMNS": [
+        "winPctg",
+        "pointPctg",
+        "regulationWinPctg",
+        "goalsForPctg",
+        "goalDifferentialPctg",
+        "regulationPlusOtWinPctg",
+        "PP%",
+        "PK%",
+        "FO%",
+        "possAdjHitsPctg",
+        "possAdjTakeawaysPctg",
+        "possTypeAdjGiveawaysPctg",
+        "reboundxGoalsPctg",
+        "xGoalsPercentage"
+      ],
+      "CACHE_DIR": "/workspaces/NHL_playoff_model/data/cache",
+      "SIMULATION_RESULTS_DIR": "/workspaces/NHL_playoff_model/data/simulation_results",
+      "ENABLE_CACHING": true,
+      "CACHE_VERSION": "v2",
+      "CACHE_DURATION": 86400,
+      "DATA_FOLDER": "data",
+      "MODEL_FOLDER": "models",
+      "THEME_COLOR": "#0066CC",
+      "TEAM_LOGOS_URL": "https://assets.nhle.com/logos/nhl/svg/{}_light.svg",
+      "ENABLE_ANIMATIONS": true,
+      "DEFAULT_CHART_HEIGHT": 400,
+      "ENABLE_DEBUG_UI": true,
+      "LOG_LEVEL": "INFO",
+      "ENABLE_DATA_VALIDATION": true,
+      "ENABLE_PERFORMANCE_METRICS": true,
+      "DETAILED_ERROR_REPORTING": true
+    },
+    "imported_constants": [],
+    "hardcoded_values": [
+      {
+        "type": "HOME_ICE_ADVANTAGE",
+        "value": 0.039,
+        "line": 19
+      },
+      {
+        "type": "SERIES_LENGTH_DIST",
+        "value": [
+          0.14,
+          0.243,
+          0.336,
+          0.281
+        ],
+        "line": 20
+      }
+    ]
+  },
+  "streamlit_app/components/__init__.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/utils/validation_utils.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/utils/visualization_utils.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/utils/data_validation.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/utils/simulation_analysis.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/utils/data_handlers.py": {
+    "defined_constants": {},
+    "imported_constants": [
+      "HOME_ICE_ADVANTAGE",
+      "SERIES_LENGTH_DISTRIBUTION",
+      "REFRESH_HOUR",
+      "TIMEZONE",
+      "API_BASE_URL",
+      "API_TIMEOUT",
+      "CRITICAL_FEATURES"
+    ],
+    "hardcoded_values": []
+  },
+  "streamlit_app/utils/simulation_utils.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/utils/visualization.py": {
+    "defined_constants": {
+      "DEFAULT_GRAY": "#777777",
+      "COLOR_SIMILARITY_THRESHOLD": 90
+    },
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/utils/matchup_utils.py": {
+    "defined_constants": {},
+    "imported_constants": [
+      "CRITICAL_FEATURES"
+    ],
+    "hardcoded_values": []
+  },
+  "streamlit_app/utils/debug_utils.py": {
+    "defined_constants": {},
+    "imported_constants": [
+      "HOME_ICE_ADVANTAGE",
+      "SERIES_LENGTH_DISTRIBUTION",
+      "CRITICAL_FEATURES"
+    ],
+    "hardcoded_values": []
+  },
+  "streamlit_app/utils/model_utils.py": {
+    "defined_constants": {
+      "HOME_ICE_ADVANTAGE": 0.039,
+      "DEFAULT_WIN_PROBABILITY": 0.55,
+      "SERIES_LENGTH_DISTRIBUTION": [
+        0.14,
+        0.243,
+        0.336,
+        0.281
+      ],
+      "X": null
+    },
+    "imported_constants": [],
+    "hardcoded_values": [
+      {
+        "type": "HOME_ICE_ADVANTAGE",
+        "value": 0.039,
+        "line": 13
+      },
+      {
+        "type": "SERIES_LENGTH_DIST",
+        "value": [
+          0.14,
+          0.243,
+          0.336,
+          0.281
+        ],
+        "line": 15
+      }
+    ]
+  },
+  "streamlit_app/utils/__init__.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/utils/cache_manager.py": {
+    "defined_constants": {},
+    "imported_constants": [
+      "REFRESH_HOUR",
+      "TIMEZONE"
+    ],
+    "hardcoded_values": []
+  },
+  "streamlit_app/pages/first_round.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/pages/sim_bracket.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/pages/head_to_head.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/pages/debug.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/pages/simulation_results.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/pages/about.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/pages/__init__.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "streamlit_app/models/__init__.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "tools/dependency_analyzer.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "tools/run_analysis.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "tools/constants_validator.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "tools/function_checker.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "git/git_pull.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "git/git_push.py": {
+    "defined_constants": {},
+    "imported_constants": [],
+    "hardcoded_values": []
+  },
+  "git/deploy_streamlit.py": {
+    "defined_constants": {
+      "STREAMLIT_APP_PATH": null,
+      "REQUIREMENTS_FILE": null
+    },
+    "imported_constants": [],
+    "hardcoded_values": []
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "constants_by_file": {
+    "app.py": [],
+    "tests/test_validation.py": [],
+    "tests/__init__.py": [],
+    "streamlit_app/__init__.py": [],
+    "streamlit_app/config.py": [
+      "APP_TITLE",
+      "APP_VERSION",
+      "AUTHOR",
+      "GITHUB_URL",
+      "HOME_ICE_ADVANTAGE",
+      "SERIES_LENGTH_DISTRIBUTION",
+      "API_BASE_URL",
+      "API_TIMEOUT",
+      "API_RETRIES",
+      "REFRESH_HOUR",
+      "TIMEZONE",
+      "CACHE_DURATION",
+      "CRITICAL_FEATURES",
+      "MODEL_FEATURES",
+      "PERCENTAGE_COLUMNS",
+      "CONFERENCE_NAMES",
+      "DIVISION_NAMES",
+      "PLAYOFF_SPOTS_PER_DIVISION",
+      "WILDCARDS_PER_CONFERENCE",
+      "DEFAULT_SIMULATION_COUNT",
+      "MINIMUM_SIMULATION_COUNT",
+      "MAXIMUM_SIMULATION_COUNT",
+      "TEAM_COLORS",
+      "DEBUG_MODE",
+      "LOG_LEVEL",
+      "MAX_LOG_FILES",
+      "MAX_LOG_SIZE",
+      "BASE_DIR",
+      "DATA_DIR",
+      "MODEL_DIR",
+      "LOG_DIR"
+    ],
+    "streamlit_app/components/__init__.py": [],
+    "streamlit_app/utils/validation_utils.py": [],
+    "streamlit_app/utils/visualization_utils.py": [],
+    "streamlit_app/utils/data_validation.py": [],
+    "streamlit_app/utils/simulation_analysis.py": [],
+    "streamlit_app/utils/data_handlers.py": [],
+    "streamlit_app/utils/simulation_utils.py": [],
+    "streamlit_app/utils/visualization.py": [
+      "DEFAULT_GRAY",
+      "COLOR_SIMILARITY_THRESHOLD"
+    ],
+    "streamlit_app/utils/matchup_utils.py": [],
+    "streamlit_app/utils/debug_utils.py": [],
+    "streamlit_app/utils/model_utils.py": [
+      "HOME_ICE_ADVANTAGE",
+      "DEFAULT_WIN_PROBABILITY",
+      "SERIES_LENGTH_DISTRIBUTION",
+      "X"
+    ],
+    "streamlit_app/utils/__init__.py": [],
+    "streamlit_app/utils/cache_manager.py": [],
+    "streamlit_app/pages/first_round.py": [],
+    "streamlit_app/pages/sim_bracket.py": [],
+    "streamlit_app/pages/head_to_head.py": [],
+    "streamlit_app/pages/debug.py": [],
+    "streamlit_app/pages/simulation_results.py": [],
+    "streamlit_app/pages/about.py": [],
+    "streamlit_app/pages/__init__.py": [],
+    "streamlit_app/models/simulation.py": [
+      "HOME_ICE_ADVANTAGE",
+      "SERIES_LENGTH_DISTRIBUTION"
+    ],
+    "streamlit_app/models/__init__.py": [],
+    "tools/dependency_analyzer.py": [],
+    "tools/run_analysis.py": [],
+    "tools/analyze_functions.py": [],
+    "tools/constants_validator.py": [],
+    "tools/function_checker.py": [],
+    "tools/analyze_imports.py": [],
+    "git/git_pull.py": [],
+    "git/git_push.py": [],
+    "git/deploy_streamlit.py": [
+      "STREAMLIT_APP_PATH",
+      "REQUIREMENTS_FILE"
+    ]
+  },
+  "duplicate_constants": {
+    "HOME_ICE_ADVANTAGE": [
+      "streamlit_app/config.py",
+      "streamlit_app/utils/model_utils.py",
+      "streamlit_app/models/simulation.py"
+    ],
+    "SERIES_LENGTH_DISTRIBUTION": [
+      "streamlit_app/config.py",
+      "streamlit_app/utils/model_utils.py",
+      "streamlit_app/models/simulation.py"
+    ]
+  },
+  "hardcoded_values": []
+}

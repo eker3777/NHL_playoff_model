@@ -1,0 +1,116 @@
+{
+  "defined_constants": {
+    "APP_TITLE": "NHL Playoff Predictor",
+    "APP_VERSION": "2.0.0",
+    "AUTHOR": "Your Name",
+    "GITHUB_URL": "https://github.com/yourusername/NHL_playoff_model",
+    "REFRESH_TIMEZONE": null,
+    "REFRESH_TIME": null,
+    "DATA_EXPIRY_HOURS": 24,
+    "HOME_ICE_ADVANTAGE": 0.039,
+    "SERIES_LENGTH_DIST": [
+      0.14,
+      0.243,
+      0.336,
+      0.281
+    ],
+    "DEFAULT_WIN_PROBABILITY": 0.5,
+    "NHL_API_BASE_URL": "https://statsapi.web.nhl.com/api/v1",
+    "NHL_API_TIMEOUT": 30,
+    "RANDOM_SEED": 42,
+    "DEFAULT_N_SIMULATIONS": 1000,
+    "MIN_REQUIRED_SIMULATIONS": 100,
+    "MAX_SIMULATIONS": 10000,
+    "TEAM_STATS_ESSENTIAL": [
+      "points",
+      "wins",
+      "losses",
+      "otLosses",
+      "goalFor",
+      "goalAgainst",
+      "goalDifferential",
+      "homeWins",
+      "roadWins"
+    ],
+    "TEAM_STATS_IMPORTANT": [
+      "points",
+      "regulationWins",
+      "goalDifferential",
+      "goalFor",
+      "goalAgainst",
+      "homeWins",
+      "roadWins",
+      "homeGoalDifferential",
+      "roadGoalDifferential",
+      "l10Points",
+      "l10GoalDifferential"
+    ],
+    "CRITICAL_FEATURES": [
+      "PP%_rel",
+      "PK%_rel",
+      "FO%",
+      "playoff_performance_score",
+      "xGoalsPercentage",
+      "homeRegulationWin%",
+      "roadRegulationWin%",
+      "possAdjHitsPctg",
+      "possAdjTakeawaysPctg",
+      "possTypeAdjGiveawaysPctg",
+      "reboundxGoalsPctg",
+      "goalDiff/G",
+      "adjGoalsSavedAboveX/60",
+      "adjGoalsScoredAboveX/60"
+    ],
+    "MODEL_FEATURES": null,
+    "PERCENTAGE_COLUMNS": [
+      "winPctg",
+      "pointPctg",
+      "regulationWinPctg",
+      "goalsForPctg",
+      "goalDifferentialPctg",
+      "regulationPlusOtWinPctg",
+      "PP%",
+      "PK%",
+      "FO%",
+      "possAdjHitsPctg",
+      "possAdjTakeawaysPctg",
+      "possTypeAdjGiveawaysPctg",
+      "reboundxGoalsPctg",
+      "xGoalsPercentage"
+    ],
+    "CACHE_DIR": "/workspaces/NHL_playoff_model/data/cache",
+    "SIMULATION_RESULTS_DIR": "/workspaces/NHL_playoff_model/data/simulation_results",
+    "ENABLE_CACHING": true,
+    "CACHE_VERSION": "v2",
+    "CACHE_DURATION": 86400,
+    "DATA_FOLDER": "data",
+    "MODEL_FOLDER": "models",
+    "THEME_COLOR": "#0066CC",
+    "TEAM_LOGOS_URL": "https://assets.nhle.com/logos/nhl/svg/{}_light.svg",
+    "ENABLE_ANIMATIONS": true,
+    "DEFAULT_CHART_HEIGHT": 400,
+    "ENABLE_DEBUG_UI": true,
+    "LOG_LEVEL": "INFO",
+    "ENABLE_DATA_VALIDATION": true,
+    "ENABLE_PERFORMANCE_METRICS": true,
+    "DETAILED_ERROR_REPORTING": true
+  },
+  "imported_constants": [],
+  "hardcoded_values": [
+    {
+      "type": "HOME_ICE_ADVANTAGE",
+      "value": 0.039,
+      "line": 19
+    },
+    {
+      "type": "SERIES_LENGTH_DIST",
+      "value": [
+        0.14,
+        0.243,
+        0.336,
+        0.281
+      ],
+      "line": 20
+    }
+  ]
+}

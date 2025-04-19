@@ -1,33 +1,33 @@
 conference,matchup,count,probability,top_seed_win_pct
-Western,Winnipeg Jets vs Los Angeles Kings,132,13.200000000000001,58.333333333333336
-Eastern,Washington Capitals vs Tampa Bay Lightning,130,13.0,43.84615384615385
-Eastern,Tampa Bay Lightning vs Carolina Hurricanes,123,12.3,56.91056910569105
-Western,Winnipeg Jets vs Vegas Golden Knights,118,11.799999999999999,62.71186440677966
-Eastern,Washington Capitals vs Toronto Maple Leafs,105,10.5,46.666666666666664
-Western,Dallas Stars vs Los Angeles Kings,98,9.8,56.12244897959183
-Western,Vegas Golden Knights vs Dallas Stars,88,8.799999999999999,53.40909090909091
-Western,Vegas Golden Knights vs Colorado Avalanche,85,8.5,49.411764705882355
-Western,Winnipeg Jets vs Edmonton Oilers,76,7.6,59.210526315789465
-Eastern,Washington Capitals vs Florida Panthers,74,7.3999999999999995,54.054054054054056
-Eastern,Carolina Hurricanes vs Florida Panthers,69,6.9,47.82608695652174
-Western,Los Angeles Kings vs Colorado Avalanche,66,6.6000000000000005,42.42424242424242
-Eastern,Tampa Bay Lightning vs New Jersey Devils,65,6.5,63.07692307692307
-Eastern,Carolina Hurricanes vs Ottawa Senators,59,5.8999999999999995,62.71186440677966
-Western,Dallas Stars vs Edmonton Oilers,58,5.800000000000001,67.24137931034483
-Eastern,Toronto Maple Leafs vs Carolina Hurricanes,58,5.800000000000001,58.620689655172406
-Eastern,Washington Capitals vs Ottawa Senators,47,4.7,65.95744680851064
-Eastern,Toronto Maple Leafs vs New Jersey Devils,47,4.7,48.93617021276596
-Eastern,New Jersey Devils vs Ottawa Senators,47,4.7,65.95744680851064
-Western,Colorado Avalanche vs Edmonton Oilers,47,4.7,51.06382978723404
-Western,Winnipeg Jets vs Minnesota Wild,45,4.5,66.66666666666666
-Eastern,Florida Panthers vs New Jersey Devils,43,4.3,51.162790697674424
-Eastern,Tampa Bay Lightning vs Montréal Canadiens,41,4.1000000000000005,70.73170731707317
-Western,Los Angeles Kings vs St. Louis Blues,40,4.0,55.00000000000001
-Western,Vegas Golden Knights vs St. Louis Blues,39,3.9,48.717948717948715
-Eastern,Toronto Maple Leafs vs Montréal Canadiens,36,3.5999999999999996,77.77777777777779
-Eastern,Florida Panthers vs Montréal Canadiens,35,3.5000000000000004,74.28571428571429
-Western,Edmonton Oilers vs St. Louis Blues,33,3.3000000000000003,57.57575757575758
-Western,Dallas Stars vs Minnesota Wild,27,2.7,62.96296296296296
-Western,Colorado Avalanche vs Minnesota Wild,24,2.4,66.66666666666666
-Western,Minnesota Wild vs St. Louis Blues,24,2.4,50.0
-Eastern,Ottawa Senators vs Montréal Canadiens,21,2.1,42.857142857142854
+Western,Winnipeg Jets vs Vegas Golden Knights,1262,12.620000000000001,58.87480190174327
+Eastern,Washington Capitals vs Tampa Bay Lightning,1248,12.479999999999999,48.55769230769231
+Western,Winnipeg Jets vs Los Angeles Kings,1223,12.23,58.13573180703189
+Eastern,Tampa Bay Lightning vs Carolina Hurricanes,1132,11.32,60.24734982332155
+Eastern,Washington Capitals vs Toronto Maple Leafs,949,9.49,54.794520547945204
+Western,Vegas Golden Knights vs Dallas Stars,937,9.370000000000001,48.45250800426895
+Western,Dallas Stars vs Los Angeles Kings,903,9.030000000000001,53.59911406423035
+Eastern,Washington Capitals vs Florida Panthers,834,8.34,54.43645083932853
+Western,Winnipeg Jets vs Edmonton Oilers,809,8.09,60.69221260815822
+Eastern,Toronto Maple Leafs vs Carolina Hurricanes,808,8.08,49.00990099009901
+Eastern,Carolina Hurricanes vs Florida Panthers,791,7.91,37.67383059418458
+Western,Vegas Golden Knights vs Colorado Avalanche,750,7.5,58.666666666666664
+Eastern,Tampa Bay Lightning vs New Jersey Devils,710,7.1,58.732394366197184
+Western,Los Angeles Kings vs Colorado Avalanche,705,7.049999999999999,40.42553191489361
+Western,Dallas Stars vs Edmonton Oilers,577,5.7700000000000005,55.80589254766031
+Eastern,Washington Capitals vs Ottawa Senators,572,5.72,56.11888111888111
+Western,Vegas Golden Knights vs St. Louis Blues,487,4.87,59.13757700205339
+Eastern,Carolina Hurricanes vs Ottawa Senators,480,4.8,61.25000000000001
+Western,Colorado Avalanche vs Edmonton Oilers,476,4.760000000000001,52.73109243697479
+Eastern,Toronto Maple Leafs vs New Jersey Devils,474,4.74,53.79746835443038
+Eastern,Florida Panthers vs New Jersey Devils,455,4.55,50.32967032967033
+Western,Los Angeles Kings vs St. Louis Blues,434,4.34,59.21658986175116
+Eastern,Tampa Bay Lightning vs Montréal Canadiens,406,4.06,66.99507389162561
+Western,Winnipeg Jets vs Minnesota Wild,389,3.8899999999999997,65.80976863753213
+Eastern,Toronto Maple Leafs vs Montréal Canadiens,333,3.3300000000000005,71.17117117117117
+Eastern,New Jersey Devils vs Ottawa Senators,333,3.3300000000000005,56.75675675675676
+Western,Dallas Stars vs Minnesota Wild,319,3.19,66.77115987460816
+Western,Edmonton Oilers vs St. Louis Blues,303,3.0300000000000002,46.864686468646866
+Eastern,Florida Panthers vs Montréal Canadiens,291,2.91,59.106529209621996
+Western,Colorado Avalanche vs Minnesota Wild,245,2.45,69.38775510204081
+Eastern,Ottawa Senators vs Montréal Canadiens,184,1.8399999999999999,44.565217391304344
+Western,Minnesota Wild vs St. Louis Blues,181,1.81,44.19889502762431

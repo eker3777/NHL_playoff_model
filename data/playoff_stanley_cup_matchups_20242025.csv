@@ -1,65 +1,65 @@
 matchup,count,probability,top_seed_win_pct
-Winnipeg Jets vs Tampa Bay Lightning,49,4.9,46.93877551020408
-Winnipeg Jets vs Carolina Hurricanes,40,4.0,47.5
-Los Angeles Kings vs Tampa Bay Lightning,35,3.5000000000000004,40.0
-Winnipeg Jets vs Toronto Maple Leafs,32,3.2,62.5
-Colorado Avalanche vs Tampa Bay Lightning,31,3.1,38.70967741935484
-Vegas Golden Knights vs Tampa Bay Lightning,31,3.1,51.61290322580645
-Winnipeg Jets vs Washington Capitals,31,3.1,54.83870967741935
-Washington Capitals vs Los Angeles Kings,29,2.9000000000000004,55.172413793103445
-Dallas Stars vs Tampa Bay Lightning,29,2.9000000000000004,51.724137931034484
-Washington Capitals vs Dallas Stars,28,2.8000000000000003,53.57142857142857
-Vegas Golden Knights vs Carolina Hurricanes,25,2.5,60.0
-Dallas Stars vs Florida Panthers,24,2.4,50.0
-Washington Capitals vs Colorado Avalanche,24,2.4,50.0
-Winnipeg Jets vs New Jersey Devils,24,2.4,70.83333333333334
-Los Angeles Kings vs Carolina Hurricanes,24,2.4,58.333333333333336
-Washington Capitals vs Vegas Golden Knights,23,2.3,52.17391304347826
-Winnipeg Jets vs Florida Panthers,23,2.3,65.21739130434783
-Dallas Stars vs Toronto Maple Leafs,22,2.1999999999999997,36.36363636363637
-Washington Capitals vs Edmonton Oilers,22,2.1999999999999997,63.63636363636363
-Vegas Golden Knights vs Florida Panthers,21,2.1,33.33333333333333
-Dallas Stars vs Carolina Hurricanes,20,2.0,45.0
-Tampa Bay Lightning vs Edmonton Oilers,20,2.0,70.0
-Vegas Golden Knights vs Toronto Maple Leafs,19,1.9,52.63157894736842
-Toronto Maple Leafs vs Los Angeles Kings,19,1.9,52.63157894736842
-Winnipeg Jets vs Ottawa Senators,18,1.7999999999999998,66.66666666666666
-Dallas Stars vs New Jersey Devils,18,1.7999999999999998,66.66666666666666
-Toronto Maple Leafs vs Colorado Avalanche,16,1.6,18.75
-Edmonton Oilers vs Florida Panthers,15,1.5,60.0
-Los Angeles Kings vs Florida Panthers,15,1.5,53.333333333333336
-Vegas Golden Knights vs New Jersey Devils,14,1.4000000000000001,42.857142857142854
-Colorado Avalanche vs New Jersey Devils,14,1.4000000000000001,57.14285714285714
-Los Angeles Kings vs New Jersey Devils,13,1.3,53.84615384615385
-Carolina Hurricanes vs St. Louis Blues,12,1.2,66.66666666666666
-Tampa Bay Lightning vs St. Louis Blues,12,1.2,75.0
-Toronto Maple Leafs vs St. Louis Blues,12,1.2,58.333333333333336
-Toronto Maple Leafs vs Edmonton Oilers,12,1.2,50.0
-Colorado Avalanche vs Carolina Hurricanes,12,1.2,58.333333333333336
-Vegas Golden Knights vs Ottawa Senators,11,1.0999999999999999,54.54545454545454
-Washington Capitals vs St. Louis Blues,11,1.0999999999999999,45.45454545454545
-Colorado Avalanche vs Ottawa Senators,10,1.0,60.0
-Colorado Avalanche vs Florida Panthers,9,0.8999999999999999,33.33333333333333
-Toronto Maple Leafs vs Minnesota Wild,9,0.8999999999999999,77.77777777777779
-Washington Capitals vs Minnesota Wild,9,0.8999999999999999,44.44444444444444
-Winnipeg Jets vs Montréal Canadiens,9,0.8999999999999999,66.66666666666666
-Vegas Golden Knights vs Montréal Canadiens,8,0.8,62.5
-St. Louis Blues vs New Jersey Devils,8,0.8,75.0
-Edmonton Oilers vs New Jersey Devils,7,0.7000000000000001,14.285714285714285
-Florida Panthers vs Minnesota Wild,7,0.7000000000000001,42.857142857142854
-Los Angeles Kings vs Ottawa Senators,7,0.7000000000000001,57.14285714285714
-Edmonton Oilers vs Carolina Hurricanes,7,0.7000000000000001,71.42857142857143
-Carolina Hurricanes vs Minnesota Wild,7,0.7000000000000001,85.71428571428571
-Los Angeles Kings vs Montréal Canadiens,6,0.6,100.0
-Tampa Bay Lightning vs Minnesota Wild,6,0.6,83.33333333333334
-Dallas Stars vs Montréal Canadiens,6,0.6,50.0
-Edmonton Oilers vs Ottawa Senators,5,0.5,100.0
-Colorado Avalanche vs Montréal Canadiens,5,0.5,100.0
-Dallas Stars vs Ottawa Senators,5,0.5,40.0
-St. Louis Blues vs Ottawa Senators,4,0.4,75.0
-Edmonton Oilers vs Montréal Canadiens,4,0.4,50.0
-Florida Panthers vs St. Louis Blues,4,0.4,50.0
-Minnesota Wild vs Ottawa Senators,3,0.3,33.33333333333333
-Minnesota Wild vs New Jersey Devils,2,0.2,50.0
-Minnesota Wild vs Montréal Canadiens,2,0.2,100.0
-St. Louis Blues vs Montréal Canadiens,1,0.1,100.0
+Winnipeg Jets vs Tampa Bay Lightning,437,4.37,54.004576659038904
+Winnipeg Jets vs Washington Capitals,437,4.37,56.97940503432495
+Vegas Golden Knights vs Tampa Bay Lightning,355,3.55,49.57746478873239
+Washington Capitals vs Vegas Golden Knights,330,3.3000000000000003,51.81818181818182
+Winnipeg Jets vs Carolina Hurricanes,325,3.25,57.84615384615385
+Winnipeg Jets vs Toronto Maple Leafs,299,2.9899999999999998,61.20401337792642
+Los Angeles Kings vs Tampa Bay Lightning,287,2.87,45.29616724738676
+Washington Capitals vs Los Angeles Kings,280,2.8000000000000003,53.92857142857142
+Washington Capitals vs Dallas Stars,274,2.74,52.55474452554745
+Dallas Stars vs Tampa Bay Lightning,271,2.71,46.86346863468634
+Winnipeg Jets vs Florida Panthers,264,2.64,62.5
+Vegas Golden Knights vs Carolina Hurricanes,264,2.64,47.72727272727273
+Colorado Avalanche vs Tampa Bay Lightning,237,2.37,45.14767932489451
+Dallas Stars vs Carolina Hurricanes,233,2.33,56.22317596566524
+Vegas Golden Knights vs Toronto Maple Leafs,223,2.23,57.847533632286996
+Dallas Stars vs Florida Panthers,221,2.21,43.89140271493213
+Los Angeles Kings vs Carolina Hurricanes,210,2.1,50.95238095238095
+Vegas Golden Knights vs Florida Panthers,210,2.1,52.85714285714286
+Tampa Bay Lightning vs Edmonton Oilers,210,2.1,60.952380952380956
+Washington Capitals vs Colorado Avalanche,205,2.0500000000000003,42.926829268292686
+Toronto Maple Leafs vs Los Angeles Kings,203,2.03,51.231527093596064
+Winnipeg Jets vs New Jersey Devils,200,2.0,59.5
+Toronto Maple Leafs vs Dallas Stars,182,1.82,43.956043956043956
+Los Angeles Kings vs Florida Panthers,182,1.82,52.74725274725275
+Washington Capitals vs Edmonton Oilers,177,1.77,58.75706214689266
+Vegas Golden Knights vs New Jersey Devils,157,1.5699999999999998,59.87261146496815
+Colorado Avalanche vs Carolina Hurricanes,154,1.54,57.7922077922078
+Toronto Maple Leafs vs Colorado Avalanche,146,1.46,39.04109589041096
+Los Angeles Kings vs New Jersey Devils,146,1.46,55.47945205479452
+Colorado Avalanche vs Florida Panthers,143,1.43,51.74825174825175
+Washington Capitals vs St. Louis Blues,141,1.41,58.156028368794324
+Dallas Stars vs New Jersey Devils,134,1.34,67.16417910447761
+Tampa Bay Lightning vs St. Louis Blues,131,1.31,63.358778625954194
+Winnipeg Jets vs Ottawa Senators,131,1.31,61.832061068702295
+Edmonton Oilers vs Florida Panthers,129,1.29,51.93798449612403
+Toronto Maple Leafs vs Edmonton Oilers,127,1.27,42.51968503937008
+Colorado Avalanche vs New Jersey Devils,121,1.21,55.371900826446286
+Edmonton Oilers vs Carolina Hurricanes,112,1.1199999999999999,49.107142857142854
+Winnipeg Jets vs Montréal Canadiens,108,1.08,68.51851851851852
+Dallas Stars vs Ottawa Senators,106,1.06,44.339622641509436
+Los Angeles Kings vs Ottawa Senators,103,1.03,58.252427184466015
+Vegas Golden Knights vs Ottawa Senators,102,1.02,55.88235294117647
+Carolina Hurricanes vs St. Louis Blues,90,0.8999999999999999,65.55555555555556
+Colorado Avalanche vs Ottawa Senators,90,0.8999999999999999,73.33333333333333
+Tampa Bay Lightning vs Minnesota Wild,85,0.8500000000000001,72.94117647058823
+Edmonton Oilers vs New Jersey Devils,85,0.8500000000000001,47.05882352941176
+Dallas Stars vs Montréal Canadiens,81,0.8099999999999999,55.55555555555556
+Toronto Maple Leafs vs St. Louis Blues,73,0.73,60.273972602739725
+Florida Panthers vs St. Louis Blues,72,0.72,58.333333333333336
+Carolina Hurricanes vs Minnesota Wild,66,0.66,71.21212121212122
+Toronto Maple Leafs vs Minnesota Wild,64,0.64,68.75
+Los Angeles Kings vs Montréal Canadiens,62,0.62,69.35483870967742
+Vegas Golden Knights vs Montréal Canadiens,60,0.6,60.0
+Washington Capitals vs Minnesota Wild,57,0.5700000000000001,54.385964912280706
+Edmonton Oilers vs Ottawa Senators,57,0.5700000000000001,43.859649122807014
+Colorado Avalanche vs Montréal Canadiens,55,0.5499999999999999,74.54545454545455
+Florida Panthers vs Minnesota Wild,53,0.53,54.71698113207547
+St. Louis Blues vs New Jersey Devils,53,0.53,41.509433962264154
+Ottawa Senators vs St. Louis Blues,46,0.45999999999999996,52.17391304347826
+Edmonton Oilers vs Montréal Canadiens,43,0.43,51.162790697674424
+St. Louis Blues vs Montréal Canadiens,32,0.32,62.5
+Minnesota Wild vs New Jersey Devils,31,0.31,51.61290322580645
+Minnesota Wild vs Ottawa Senators,28,0.27999999999999997,42.857142857142854
+Minnesota Wild vs Montréal Canadiens,10,0.1,70.0
