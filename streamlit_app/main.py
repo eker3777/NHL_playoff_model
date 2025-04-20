@@ -72,7 +72,7 @@ def convert_to_eastern(dt):
 def refresh_simulations():
     """Manually refresh the number of simulations."""
     try:
-        n_simulations = 10000
+        n_simulations = 100
         sim_results = simulation.update_daily_simulations(n_simulations=n_simulations)
         if sim_results:
             st.session_state.last_simulation_refresh = datetime.now()
@@ -117,7 +117,7 @@ def main():
     
     # Run daily simulations (10,000 simulations once per day)
     try:
-        n_simulations = 10000
+        n_simulations = 100
         sim_results = simulation.update_daily_simulations(n_simulations=n_simulations)
         if sim_results:
             st.session_state.last_simulation_refresh = datetime.now()
