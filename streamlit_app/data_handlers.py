@@ -623,6 +623,12 @@ def engineer_features(combined_data):
     available_features = [f for f in critical_features if f in df.columns]
     print(f"Available critical features: {len(available_features)}/{len(critical_features)}")
     print(f"Missing features: {[f for f in critical_features if f not in available_features]}")
+
+        # convert iceTime to minutes, divided by 60
+    if 'iceTime' in df.columns:
+        df['iceTime'] = df['iceTime'].astype(float) / 60
+    else:
+        print("iceTime column not found - skipping conversion")
     
     # Calculate additional metrics from the data
     if all(col in df.columns for col in ['goalDifferential', 'gamesPlayed']):
