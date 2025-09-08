@@ -23,17 +23,17 @@ logger = setup_logging(log_level="INFO", log_file="demo.log")
 
 def main():
     """Demonstrate the improved project structure."""
-    
+
     logger.info("=== NHL Playoff Model - Improved Structure Demo ===")
-    
+
     # 1. Show new logging system
     logger.info("✓ Centralized logging system implemented")
     logger.warning("Example warning message")
     logger.error("Example error message (this is just a demo)")
-    
+
     # 2. Show project structure
     logger.info("✓ Project structure harmoniously merged:")
-    
+
     structure_items = [
         "📁 core/ - New modular core components from main",
         "📁 tests/ - Comprehensive test framework (unit, integration, performance)",
@@ -44,12 +44,12 @@ def main():
         "📄 main.py - New pipeline script with proper logging",
         "📄 logging_config.py - Centralized logging configuration",
         "📄 .pre-commit-config.yaml - Code quality tools",
-        "📄 pytest.ini - Test configuration"
+        "📄 pytest.ini - Test configuration",
     ]
-    
+
     for item in structure_items:
         logger.info(f"  {item}")
-    
+
     # 3. Show implemented improvements
     logger.info("✓ Phase 1 improvements implemented:")
     improvements = [
@@ -57,12 +57,12 @@ def main():
         "Test framework with pytest configuration",
         "Code quality tools (black, isort, flake8, pre-commit)",
         "Development dependencies in requirements.txt",
-        "Proper .gitignore for development artifacts"
+        "Proper .gitignore for development artifacts",
     ]
-    
+
     for improvement in improvements:
         logger.info(f"  - {improvement}")
-    
+
     # 4. Show preserved functionality
     logger.info("✓ Critical functionality preserved:")
     preserved = [
@@ -70,12 +70,12 @@ def main():
         "Comprehensive documentation and reports",
         "Existing streamlit app structure and pages",
         "Model files and data processing logic",
-        "Branch comparison and analysis capabilities"
+        "Branch comparison and analysis capabilities",
     ]
-    
+
     for item in preserved:
         logger.info(f"  - {item}")
-    
+
     # 5. Next steps from roadmap
     logger.info("✓ Ready for Phase 2 improvements:")
     next_steps = [
@@ -83,15 +83,15 @@ def main():
         "Data management classes",
         "Model management system",
         "Exception handling improvements",
-        "API rate limiting"
+        "API rate limiting",
     ]
-    
+
     for step in next_steps:
         logger.info(f"  - {step}")
-    
+
     logger.info("=== Demo completed successfully! ===")
     logger.info("Check demo.log for detailed logging output.")
-    
+
     return True
 
 
