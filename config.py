@@ -24,6 +24,9 @@ class Config:
     # Directory paths
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     DATA_DIR = os.path.join(BASE_DIR, "data")
+    RAW_DATA_DIR = os.path.join(DATA_DIR, "raw")
+    PROCESSED_DATA_DIR = os.path.join(DATA_DIR, "processed")
+    FINAL_DATA_DIR = os.path.join(DATA_DIR, "final")
     MODELS_DIR = os.path.join(BASE_DIR, "models")
     REPORTS_DIR = os.path.join(BASE_DIR, "reports")
     
@@ -48,6 +51,9 @@ class Config:
     def __init__(self):
         """Initialize configuration and create necessary directories"""
         os.makedirs(self.DATA_DIR, exist_ok=True)
+        os.makedirs(self.RAW_DATA_DIR, exist_ok=True)
+        os.makedirs(self.PROCESSED_DATA_DIR, exist_ok=True)
+        os.makedirs(self.FINAL_DATA_DIR, exist_ok=True)
         os.makedirs(self.MODELS_DIR, exist_ok=True)
         os.makedirs(self.REPORTS_DIR, exist_ok=True)
 
