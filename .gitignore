@@ -4,6 +4,15 @@ __pycache__/
 *$py.class
 *.so
 .Python
+env/
+venv/
+ENV/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Distribution / packaging
+.Python
 build/
 develop-eggs/
 dist/
@@ -16,21 +25,29 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
-# Virtual environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -38,24 +55,19 @@ venv.bak/
 # pyenv
 .python-version
 
-# Streamlit
-.streamlit/
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Data files (except essential ones)
-*.log
-temp_data.csv
-debug.log
-
-# Model files (large binary files)
-*.pkl
-*.joblib
-*.model
-
-# IDE
+# IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS
 .DS_Store
@@ -67,7 +79,21 @@ ehthumbs.db
 Thumbs.db
 
 # Project specific
-analysis_output/*/
-secrets.toml
-error_log.txt
-refresh_log.txt
+*.log
+temp_data.csv
+.streamlit/
+
+# Reports and generated files
+reports/*.png
+reports/*.jpg
+reports/*.jpeg
+reports/*.gif
+
+# Data cache (keep structure but not files)
+data/*.csv
+data/*.json
+!data/.gitkeep
+
+# Model files (large binary files)
+models/*.pkl
+!models/.gitkeep
