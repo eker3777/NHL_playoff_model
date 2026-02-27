@@ -79,6 +79,12 @@ Data assets are now organized for repeatable processing stages:
 - `data/processed/` for cleaned intermediate datasets
 - `data/final/` for final model-ready tables
 
+For an incremental refactor based on existing main-branch processes, use:
+
+```bash
+python playoff_model_v2_2026/main_v2.py
+```
+
 ### Basic Prediction Pipeline
 
 Generate predictions for the current NHL season:
