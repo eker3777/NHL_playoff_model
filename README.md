@@ -64,6 +64,27 @@ streamlit run streamlit_app/main.py
 
 ## Usage
 
+### 2026 Foundation Workflow
+
+To support regathering missing data and a clean rebuild for 2026, this branch includes a simple notebook-first workflow:
+
+1. `notebooks/01_data_extraction_cleaning_storage.ipynb`
+2. `notebooks/02_data_pattern_exploration.ipynb`
+3. `notebooks/03_feature_engineering_advantages.ipynb`
+4. `notebooks/04_modeling_xgboost_pygam.ipynb`
+
+Data assets are now organized for repeatable processing stages:
+
+- `data/raw/` for scraped/source snapshots
+- `data/processed/` for cleaned intermediate datasets
+- `data/final/` for final model-ready tables
+
+For an incremental refactor based on existing main-branch processes, use:
+
+```bash
+python playoff_model_v2_2026/main_v2.py
+```
+
 ### Basic Prediction Pipeline
 
 Generate predictions for the current NHL season:
@@ -169,7 +190,11 @@ NHL_playoff_model/
 │   ├── visualizations.py
 │   └── report_generator.py
 ├── streamlit_app/         # Interactive web application
-├── data/                  # Cached NHL data
+├── data/                  # Data storage
+│   ├── raw/               # Raw scraped/source data
+│   ├── processed/         # Cleaned/intermediate data
+│   └── final/             # Final model-ready datasets
+├── notebooks/             # 2026 workflow notebooks
 ├── models/                # Trained ML models
 ├── reports/               # Generated reports and charts
 └── logs/                  # Execution logs
